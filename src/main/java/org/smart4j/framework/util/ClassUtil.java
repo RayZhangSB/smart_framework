@@ -39,7 +39,9 @@ public final class ClassUtil {
         }
         return clazz;
     }
-
+    public static Class<?> loadClass(String className){
+        return loadClass(className , false);
+    }
     /**
      * @param packageName
      * @return 包下的所有类

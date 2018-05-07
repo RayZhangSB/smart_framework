@@ -38,6 +38,7 @@ public final class BeanHelper {
      */
     @SuppressWarnings("unchecked")
     public static <T> T getBean(Class<?> clz){
+
         if(!BEAN_MAP.containsKey(clz)){
             throw new RuntimeException("can't get bean by class:"+clz);
 

@@ -11,4 +11,8 @@ public final class StringUtil {
     public static boolean isNotEmpty(String packageName) {
         return !("".equals(packageName));
     }
+
+    public static String[] splitString(String str, String regex) {
+        return str.split(regex);
+    }
 }
