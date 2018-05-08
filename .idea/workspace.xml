@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64c7e913-916e-4a85-bb6f-1b0ff986d514" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Aspect.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/AspectProxy.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/Proxy.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/ProxyChain.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/ProxyManager.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Transaction.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/TransactionProxy.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/smart_framework.iml" afterPath="$PROJECT_DIR$/smart_framework.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/BeanHelper.java" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/BeanHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ClassHelper.java" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ClassHelper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,63 +22,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ProxyManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/ProxyManager.java">
+      <file leaf-file-name="TransactionProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/TransactionProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-              <folding>
-                <element signature="e#379#409#0" expanded="true" />
-                <element signature="method#createProxy#0;class#ProxyManager#0" expanded="true" />
-                <element signature="e#553#831#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AspectProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/AspectProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="841">
+              <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#doProxy#0;class#AspectProxy#0" expanded="true" />
-                <element signature="method#before#0;class#AspectProxy#0" expanded="true" />
-                <element signature="method#after#0;class#AspectProxy#0" expanded="true" />
-                <element signature="method#error#0;class#AspectProxy#0" expanded="true" />
-                <element signature="method#intercept#0;class#AspectProxy#0" expanded="true" />
+                <element signature="e#559#689#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AopHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AopHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+            <state relative-caret-position="1003">
+              <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="initializer##0;class#AopHelper#0" expanded="true" />
                 <element signature="method#createProxyMap#0;class#AopHelper#0" expanded="true" />
-                <element signature="e#1347#1372#0" expanded="true" />
+                <element signature="e#1454#1479#0" expanded="true" />
+                <element signature="method#addTransactionProxy#0;class#AopHelper#0" expanded="true" />
                 <element signature="method#createTargetClassSet#0;class#AopHelper#0" expanded="true" />
-                <element signature="e#1877#1887#0" expanded="true" />
+                <element signature="e#2382#2392#0" expanded="true" />
                 <element signature="method#createTargetMap#0;class#AopHelper#0" expanded="true" />
-                <element signature="e#2336#2359#0" expanded="true" />
-                <element signature="e#2617#2624#0" expanded="true" />
+                <element signature="e#2841#2864#0" expanded="true" />
+                <element signature="e#3122#3129#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelperLoader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -98,8 +62,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -150,8 +114,11 @@
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/AspectProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/BeanHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ClassHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/TransactionProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java" />
       </list>
     </option>
   </component>
@@ -175,8 +142,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="153" />
-    <option name="y" value="50" />
+    <option name="x" value="-14" />
+    <option name="y" value="15" />
     <option name="width" value="1247" />
     <option name="height" value="988" />
   </component>
@@ -416,7 +383,7 @@
       <updated>1525599084253</updated>
       <workItem from="1525599087191" duration="10199000" />
       <workItem from="1525664248784" duration="10835000" />
-      <workItem from="1525759795616" duration="4611000" />
+      <workItem from="1525759795616" duration="8442000" />
     </task>
     <task id="LOCAL-00001" summary="mvc framework success">
       <created>1525698206829</created>
@@ -425,14 +392,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525698206829</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add aop">
+      <created>1525771051042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525771051042</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25645000" />
+    <option name="totallyTimeSpent" value="29476000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="153" y="50" width="1247" height="988" extended-state="0" />
+    <frame x="-14" y="15" width="1247" height="988" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -446,7 +420,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40113914" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.268511" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -471,7 +445,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mvc framework success" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvc framework success" />
+    <MESSAGE value="add aop" />
+    <option name="LAST_COMMIT_MESSAGE" value="add aop" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -729,6 +706,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -854,14 +832,14 @@
           <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#561#568#0" expanded="false" />
+            <element signature="e#559#566#0" expanded="false" />
             <element signature="method#ProxyChain#0;class#ProxyChain#0" expanded="false" />
-            <element signature="e#1051#1052#0" expanded="false" />
-            <element signature="e#1085#1086#0" expanded="false" />
-            <element signature="e#1124#1125#0" expanded="false" />
-            <element signature="e#1159#1160#0" expanded="false" />
-            <element signature="e#1200#1201#0" expanded="false" />
-            <element signature="e#1235#1236#0" expanded="false" />
+            <element signature="e#1048#1049#0" expanded="false" />
+            <element signature="e#1082#1083#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1156#1157#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+            <element signature="e#1232#1233#0" expanded="false" />
             <element signature="method#doProxyChain#0;class#ProxyChain#0" expanded="false" />
           </folding>
         </state>
@@ -872,10 +850,10 @@
         <state relative-caret-position="144">
           <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
           <folding>
-            <element signature="e#379#409#0" expanded="true" />
+            <element signature="e#378#408#0" expanded="true" />
             <element signature="method#createProxy#0;class#ProxyManager#0" expanded="true" />
-            <element signature="e#553#831#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#552#835#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -886,8 +864,8 @@
           <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
           <folding>
             <element signature="method#getBean#0;class#BeanHelper#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -898,8 +876,8 @@
           <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
           <folding>
             <element signature="method#getClassSetBySuper#0;class#ClassHelper#0" expanded="true" />
-            <element signature="e#2000#2010#0" expanded="true" />
-            <element signature="e#2367#2377#0" expanded="true" />
+            <element signature="e#2002#2012#0" expanded="true" />
+            <element signature="e#2372#2382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -907,7 +885,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/AspectProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doProxy#0;class#AspectProxy#0" expanded="true" />
@@ -919,28 +897,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createProxyMap#0;class#AopHelper#0" expanded="true" />
-            <element signature="e#1347#1372#0" expanded="true" />
-            <element signature="method#createTargetClassSet#0;class#AopHelper#0" expanded="true" />
-            <element signature="e#1877#1887#0" expanded="true" />
-            <element signature="method#createTargetMap#0;class#AopHelper#0" expanded="true" />
-            <element signature="e#2336#2359#0" expanded="true" />
-            <element signature="e#2617#2624#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/program files/JAVA1.8/JDK/src.zip!/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1824">
+          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#509#521#0" expanded="true" />
+            <element signature="method#commitTransaction#0;class#DatabaseHelper#0" expanded="true" />
+            <element signature="method#rollbackTransaction#0;class#DatabaseHelper#0" expanded="true" />
+            <element signature="method#getConnection#0;class#DatabaseHelper#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/proxy/TransactionProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#559#689#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/AopHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="initializer##0;class#AopHelper#0" expanded="true" />
+            <element signature="method#createProxyMap#0;class#AopHelper#0" expanded="true" />
+            <element signature="e#1454#1479#0" expanded="true" />
+            <element signature="method#addTransactionProxy#0;class#AopHelper#0" expanded="true" />
+            <element signature="method#createTargetClassSet#0;class#AopHelper#0" expanded="true" />
+            <element signature="e#2382#2392#0" expanded="true" />
+            <element signature="method#createTargetMap#0;class#AopHelper#0" expanded="true" />
+            <element signature="e#2841#2864#0" expanded="true" />
+            <element signature="e#3122#3129#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
