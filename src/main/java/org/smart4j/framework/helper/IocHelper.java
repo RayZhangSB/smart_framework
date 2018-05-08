@@ -15,7 +15,7 @@ import java.util.Map;
  * @Date 2018/5/7 18:57
  * @Version 1.0
  **/
-public class IocHelper {
+public final class IocHelper {
 
 
     static {

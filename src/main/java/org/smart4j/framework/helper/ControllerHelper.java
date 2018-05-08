@@ -18,7 +18,7 @@ import java.util.Set;
  * @Date 2018/5/7 19:14
  * @Version 1.0
  **/
-public class ControllerHelper {
+public final class ControllerHelper {
     //请求和处理器的映射
     private  static final Map<Request,Handler> ACTION_MAP =new HashMap<Request, Handler>();
 

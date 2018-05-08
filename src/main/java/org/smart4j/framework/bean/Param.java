@@ -26,6 +26,9 @@ public class Param {
         return CastUtil.castInteger(paramMap.get(name));
     }
 
+    public boolean isEmpty() {
+        return paramMap.isEmpty();
+    }
 
 
 }

@@ -12,18 +12,19 @@ import java.util.Set;
  * @Version 1.0
  **/
 public final class CollectionUtil {
-    public static boolean isNotEmpty(Map<Class<?>, Object> beanMap) {
+    public static boolean isNotEmpty(Map<Class<?>, Object> map) {
 
-    return beanMap.size()>0;
+        return map.size() > 0;
 
     }
-    public static boolean isNotEmpty(Set<Class<?>> beanMap) {
 
-        return beanMap.size()>0;
-    }
-    public static boolean isNotEmpty(List<Class<?>> beanMap) {
+    public static boolean isNotEmpty(Set<Class<?>> set) {
 
-        return beanMap.size()>0;
+        return set.size() > 0;
     }
 
+    public static boolean isNotEmpty(List<Object> list) {
+
+        return list.size() > 0;
+    }
 }

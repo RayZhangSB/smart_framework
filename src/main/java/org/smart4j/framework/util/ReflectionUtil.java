@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
  * @Date 2018/5/6 20:03
  * @Version 1.0
  **/
-public class ReflectionUtil {
+public final class ReflectionUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(ReflectionUtil.class);
 
     /*

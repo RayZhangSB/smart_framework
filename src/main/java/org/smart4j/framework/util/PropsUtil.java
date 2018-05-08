@@ -12,7 +12,7 @@ import java.util.Properties;
  * @Date 2018/5/6 18:03
  * @Version 1.0
  **/
-public class PropsUtil {
+public final class PropsUtil {
     public static Properties loadProps(String configFile) {
         Properties prop = new Properties();
         try {

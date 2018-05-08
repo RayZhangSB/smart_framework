@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @Date 2018/5/8 17:54
  * @Version 1.0
  **/
-public class DatabaseHelper {
+public final class DatabaseHelper {
     private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseHelper.class);
     private static final ThreadLocal<Connection> CONNECTION_HOLDER = new ThreadLocal<Connection>();
 
