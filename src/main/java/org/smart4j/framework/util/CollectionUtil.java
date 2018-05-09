@@ -23,8 +23,13 @@ public final class CollectionUtil {
         return set.size() > 0;
     }
 
-    public static boolean isNotEmpty(List<Object> list) {
+    public static boolean isNotEmpty(List<?> list) {
 
         return list.size() > 0;
+    }
+
+    public static boolean isEmpty(List<?> list) {
+
+        return !isNotEmpty(list);
     }
 }

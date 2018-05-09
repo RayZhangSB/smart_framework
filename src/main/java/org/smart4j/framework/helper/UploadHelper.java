@@ -5,12 +5,15 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.smart4j.framework.bean.FileParam;
+import org.smart4j.framework.bean.FormParam;
+import org.smart4j.framework.bean.Param;
 import org.smart4j.framework.util.FileUtil;
 import org.smart4j.framework.util.StreamUtil;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,7 +29,7 @@ public final class UploadHelper {
 
     private static ServletFileUpload servletFileUpload;
 
-    private static void init(ServletContext servletContext) {
+    public static void init(ServletContext servletContext) {
         File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
         servletFileUpload = new ServletFileUpload(new DiskFileItemFactory(DiskFileItemFactory.DEFAULT_SIZE_THRESHOLD, repository));
         int uploadLimit = ConfigHelper.getAppUploadLimit();
@@ -43,13 +46,13 @@ public final class UploadHelper {
     /*
     create request obj
      */
-//    public static Param createParam(HttpServletRequest req){
-//        List<FormParam> formParamList =new ArrayList<FormParam>();
-//        List<FileParam> fileParamList =new ArrayList<FileParam>();
-//
-//
-//
-//    }
+    public static Param createParam(HttpServletRequest req) {
+        List<FormParam> formParamList = new ArrayList<FormParam>();
+        List<FileParam> fileParamList = new ArrayList<FileParam>();
+        return new Param(formParamList, fileParamList);
+
+
+    }
 
     /*
     上传文件
@@ -68,6 +71,7 @@ public final class UploadHelper {
             throw new RuntimeException(e);
         }
     }
+
 
     /*
     批量

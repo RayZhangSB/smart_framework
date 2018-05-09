@@ -8,6 +8,8 @@ package org.smart4j.framework.util;
  * @Version 1.0
  **/
 public final class StringUtil {
+    public static final String SEPARATOR = String.valueOf((char) 29);
+
     public static boolean isNotEmpty(String packageName) {
         return !("".equals(packageName));
     }
