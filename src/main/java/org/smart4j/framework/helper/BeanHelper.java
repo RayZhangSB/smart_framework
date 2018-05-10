@@ -17,33 +17,35 @@ public final class BeanHelper {
     /*
     bean映射 类和实例的映射
      */
-    private  static  final Map<Class<?>,Object> BEAN_MAP = new HashMap<Class<?>, Object>();
+    private static final Map<Class<?>, Object> BEAN_MAP = new HashMap<Class<?>, Object>();
 
 
     static {
         Set<Class<?>> beanClassSet = ClassHelper.getBeanClassSet();
-        for(Class<?> beanClass : beanClassSet){
+        for (Class<?> beanClass : beanClassSet) {
             Object obj = ReflectionUtil.newInstance(beanClass);
-            BEAN_MAP.put(beanClass,obj);
+            BEAN_MAP.put(beanClass, obj);
         }
     }
-/*
-获取bean映射
- */
-    public  static Map<Class<?>,Object> getBeanMap(){
-        return  BEAN_MAP;
+
+    /*
+    获取bean映射
+     */
+    public static Map<Class<?>, Object> getBeanMap() {
+        return BEAN_MAP;
     }
+
     /*
     获取实例
      */
     @SuppressWarnings("unchecked")
-    public static <T> T getBean(Class<?> clz){
+    public static <T> T getBean(Class<?> clz) {
 
-        if(!BEAN_MAP.containsKey(clz)){
-            throw new RuntimeException("can't get bean by class:"+clz);
+        if (!BEAN_MAP.containsKey(clz)) {
+            throw new RuntimeException("can't get bean by class:" + clz);
 
         }
-        return (T)BEAN_MAP.get(clz);
+        return (T) BEAN_MAP.get(clz);
     }
 
 

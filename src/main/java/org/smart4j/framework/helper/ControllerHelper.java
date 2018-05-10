@@ -20,27 +20,27 @@ import java.util.Set;
  **/
 public final class ControllerHelper {
     //请求和处理器的映射
-    private  static final Map<Request,Handler> ACTION_MAP =new HashMap<Request, Handler>();
+    private static final Map<Request, Handler> ACTION_MAP = new HashMap<Request, Handler>();
 
     static {
-        Set<Class<?>> controllerClassSet =ClassHelper.getControllerClassSet();
-        if(CollectionUtil.isNotEmpty(controllerClassSet)){
-            for(Class<?> controllerClass : controllerClassSet){
+        Set<Class<?>> controllerClassSet = ClassHelper.getControllerClassSet();
+        if (CollectionUtil.isNotEmpty(controllerClassSet)) {
+            for (Class<?> controllerClass : controllerClassSet) {
                 Method[] methods = controllerClass.getDeclaredMethods();
-                if(ArrayUtil.isNotEmpty(methods)){
-                    for(Method method :methods){
-                        if (method.isAnnotationPresent(Action.class)){
-                            Action action =method.getAnnotation(Action.class);
-                            String resquestMapping  = action.value();
+                if (ArrayUtil.isNotEmpty(methods)) {
+                    for (Method method : methods) {
+                        if (method.isAnnotationPresent(Action.class)) {
+                            Action action = method.getAnnotation(Action.class);
+                            String resquestMapping = action.value();
                             //在方法上的url满足某种格式
-                            if(resquestMapping.matches("\\w+:/\\w*")){
+                            if (resquestMapping.matches("\\w+:/\\w*")) {
                                 String[] array = resquestMapping.split(":");
-                                if(ArrayUtil.isNotEmpty(array) && array.length==2){
+                                if (ArrayUtil.isNotEmpty(array) && array.length == 2) {
                                     String requestMethod = array[0];
                                     String requestPath = array[1];
-                                    Request request = new Request(requestMethod,requestPath);
-                                    Handler handler = new Handler(controllerClass,method);
-                                    ACTION_MAP.put(request,handler);
+                                    Request request = new Request(requestMethod, requestPath);
+                                    Handler handler = new Handler(controllerClass, method);
+                                    ACTION_MAP.put(request, handler);
                                 }
                             }
                         }
@@ -51,8 +51,8 @@ public final class ControllerHelper {
     }
 
 
-    public static Handler getHandler(String requestMethod,String requestPath){
-        Request request = new Request(requestMethod,requestPath);
+    public static Handler getHandler(String requestMethod, String requestPath) {
+        Request request = new Request(requestMethod, requestPath);
         return ACTION_MAP.get(request);
     }
 

@@ -30,12 +30,12 @@ public class Param {
         this.paramMap = paramMap;
     }
 
-    public long getLong(String name) {
-        return CastUtil.castLong(paramMap.get(name));
-    }
-
     public Param(List<FormParam> formParamList) {
         this(formParamList, null);
+    }
+
+    public long getLong(String name) {
+        return CastUtil.castLong(paramMap.get(name));
     }
 
     public int getInteger(String name) {
@@ -107,7 +107,6 @@ public class Param {
     public boolean isEmpty() {
         return CollectionUtil.isNotEmpty(fileParamList) && CollectionUtil.isEmpty(fileParamList);
     }
-
 
 
 }

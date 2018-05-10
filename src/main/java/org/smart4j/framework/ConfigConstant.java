@@ -2,7 +2,7 @@ package org.smart4j.framework;
 
 /**
  * @ClassName ConfigConstant
- * @Description:  提供相关配置项常量
+ * @Description: 提供相关配置项常量
  * @Author Raymond Zhang
  * @Date 2018/5/6 17:53
  * @Version 1.0

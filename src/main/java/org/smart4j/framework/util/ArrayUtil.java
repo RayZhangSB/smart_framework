@@ -9,8 +9,9 @@ package org.smart4j.framework.util;
  **/
 public final class ArrayUtil {
     public static boolean isNotEmpty(Object[] objs) {
-        return objs.length>0;
-   }
+        return objs.length > 0;
+    }
+
     public static boolean isEmpty(Object[] objs) {
         return !isNotEmpty(objs);
     }

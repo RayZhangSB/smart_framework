@@ -30,12 +30,12 @@ public final class ReflectionUtil {
         return instance;
     }
 
-    public  static Object invokeMethod(Object obj,Method method,Object ... args){
+    public static Object invokeMethod(Object obj, Method method, Object... args) {
         Object res;
         method.setAccessible(true);
         try {
-            res = method.invoke(obj,args);
-        }catch (Exception e) {
+            res = method.invoke(obj, args);
+        } catch (Exception e) {
             LOGGER.error("invoke method failed", e);
             throw new RuntimeException();
         }
@@ -44,13 +44,12 @@ public final class ReflectionUtil {
     }
 
 
-
-    public static void setField(Object obj, Field field,Object value){
+    public static void setField(Object obj, Field field, Object value) {
 
         try {
             field.setAccessible(true);
-            field.set(obj,value);
-        }catch (Exception e) {
+            field.set(obj, value);
+        } catch (Exception e) {
             LOGGER.error("set field failed", e);
             throw new RuntimeException();
         }

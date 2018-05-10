@@ -16,27 +16,28 @@ import java.util.Set;
  * @Version 1.0
  **/
 public final class ClassHelper {
-    private  static  final Set<Class<?>> CLASS_SET;
+    private static final Set<Class<?>> CLASS_SET;
 
 
     static {
         String basePackage = ConfigHelper.getAppBasePackage();
         CLASS_SET = ClassUtil.getClassSet(basePackage);
     }
+
     /*
     Get the all classes for provided package
      */
-    public static  Set<Class<?>> getClassSet(){
+    public static Set<Class<?>> getClassSet() {
         return CLASS_SET;
     }
 
     /*
     Get the all classes defined( Service) for provided package
      */
-    public  static  Set<Class<?>> getServiceClassSet(){
+    public static Set<Class<?>> getServiceClassSet() {
         Set<Class<?>> classSet = new HashSet<Class<?>>();
-        for(Class<?> cls : CLASS_SET){
-            if(cls.isAnnotationPresent(Service.class));
+        for (Class<?> cls : CLASS_SET) {
+            if (cls.isAnnotationPresent(Service.class)) ;
             classSet.add(cls);
         }
         return classSet;
@@ -45,23 +46,23 @@ public final class ClassHelper {
     /*
     Get the all classes defined( Controller) for provided package
      */
-    public static  Set<Class<?>> getControllerClassSet(){
+    public static Set<Class<?>> getControllerClassSet() {
         Set<Class<?>> classSet = new HashSet<Class<?>>();
-        for(Class<?> cls : CLASS_SET){
-            if(cls.isAnnotationPresent(Controller.class));
+        for (Class<?> cls : CLASS_SET) {
+            if (cls.isAnnotationPresent(Controller.class)) ;
             classSet.add(cls);
         }
         return classSet;
     }
 
-     /*
-    Get the all classes defined( Controller or Service .etc) for provided package
-     */
-    public  static  Set<Class<?>> getBeanClassSet(){
+    /*
+   Get the all classes defined( Controller or Service .etc) for provided package
+    */
+    public static Set<Class<?>> getBeanClassSet() {
         Set<Class<?>> beanClassSet = new HashSet<Class<?>>();
         beanClassSet.addAll(getServiceClassSet());
         beanClassSet.addAll(getControllerClassSet());
-        return  beanClassSet;
+        return beanClassSet;
     }
 
     /*

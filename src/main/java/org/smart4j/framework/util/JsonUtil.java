@@ -13,19 +13,18 @@ import org.slf4j.LoggerFactory;
  **/
 public final class JsonUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(JsonUtil.class);
-    private  static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-
+    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
 
     /*
     pojo to json
      */
-    public static <T>String toJson(T obj) {
+    public static <T> String toJson(T obj) {
         String json;
-        try{
+        try {
             json = OBJECT_MAPPER.writeValueAsString(obj);
         } catch (Exception e) {
-            LOGGER.error("convert POJO to Json failed",e);
+            LOGGER.error("convert POJO to Json failed", e);
             throw new RuntimeException();
         }
 
@@ -35,18 +34,17 @@ public final class JsonUtil {
     /*
    json to pojo
     */
-    public static <T>T  fromJson(String json ,Class<T>type) {
+    public static <T> T fromJson(String json, Class<T> type) {
         T pojo;
-        try{
-            pojo = OBJECT_MAPPER.readValue(json,type);
+        try {
+            pojo = OBJECT_MAPPER.readValue(json, type);
         } catch (Exception e) {
-            LOGGER.error("convert   Json  to POJO failed",e);
+            LOGGER.error("convert   Json  to POJO failed", e);
             throw new RuntimeException();
         }
 
         return pojo;
     }
-
 
 
 }

@@ -23,14 +23,15 @@ public final class PropsUtil {
         return prop;
     }
 
-    public static String getString(Properties configProps, String name,String defaultStr) {
+    public static String getString(Properties configProps, String name, String defaultStr) {
         String result = configProps.getProperty(name);
-        if("".equals(name)){
+        if ("".equals(name)) {
             return defaultStr;
         }
         return result;
     }
-    public static String getString(Properties configProps, String name){
-        return PropsUtil.getString(configProps,name,"");
+
+    public static String getString(Properties configProps, String name) {
+        return PropsUtil.getString(configProps, name, "");
     }
 }

@@ -18,25 +18,24 @@ public final class CodecUtil {
 
     public static String decodeURL(String source) {
         String target;
-        try{
-            target = URLEncoder.encode(source,"UTF-8");
-        }catch (Exception e){
-            LOGGER.error("encode url failed",e);
+        try {
+            target = URLEncoder.encode(source, "UTF-8");
+        } catch (Exception e) {
+            LOGGER.error("encode url failed", e);
             throw new RuntimeException();
         }
-        return  target;
+        return target;
     }
-
 
 
     public static String encodeURL(String source) {
         String target;
-        try{
-            target = URLDecoder.decode(source,"UTF-8");
-        }catch (Exception e){
-            LOGGER.error("decode url failed",e);
+        try {
+            target = URLDecoder.decode(source, "UTF-8");
+        } catch (Exception e) {
+            LOGGER.error("decode url failed", e);
             throw new RuntimeException();
         }
-        return  target;
+        return target;
     }
 }

@@ -19,22 +19,21 @@ public final class IocHelper {
 
 
     static {
-        Map<Class<?>,Object> beanMap = BeanHelper.getBeanMap();
-        if(CollectionUtil.isNotEmpty(beanMap)){
-            for(Map.Entry<Class<?>,Object> entry:beanMap.entrySet()){
+        Map<Class<?>, Object> beanMap = BeanHelper.getBeanMap();
+        if (CollectionUtil.isNotEmpty(beanMap)) {
+            for (Map.Entry<Class<?>, Object> entry : beanMap.entrySet()) {
                 Class<?> beanClass = entry.getKey();
                 Object beanInstance = entry.getValue();
                 //get all fields
                 Field[] fields = beanClass.getDeclaredFields();
 
-                if(ArrayUtil.isNotEmpty(fields)){
-                    for(Field f: fields){
-                        if(f.isAnnotationPresent(Inject.class)){
+                if (ArrayUtil.isNotEmpty(fields)) {
+                    for (Field f : fields) {
+                        if (f.isAnnotationPresent(Inject.class)) {
                             Class<?> injectClass = f.getType();
                             Object injectBean = beanMap.get(injectClass);
-                            if(injectBean != null){
-                                ReflectionUtil.setField(beanInstance,f,injectBean);
-
+                            if (injectBean != null) {
+                                ReflectionUtil.setField(beanInstance, f, injectBean);
 
 
                             }

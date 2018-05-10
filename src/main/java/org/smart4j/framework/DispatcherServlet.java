@@ -28,50 +28,51 @@ import java.util.Map;
  * @Date 2018/5/7 20:03
  * @Version 1.0
  **/
-public class DispatcherServlet extends HttpServlet{
+public class DispatcherServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletHelper.init(req, resp);
-        try {
-        //获取请求方法和路径
-            String resquestMethod = req.getMethod().toLowerCase();
-        String resquestPath = req.getPathInfo();
 
-        //get Handler
+        try {
+            //获取请求方法和路径
+            String resquestMethod = req.getMethod().toLowerCase();
+            String resquestPath = req.getPathInfo();
+
+            //get Handler
             Handler handler = ControllerHelper.getHandler(resquestMethod, resquestPath);
 
             if (handler != null) {
-            Class<?> controllerClass = handler.getControllerClass();
-            Object controllerBean = BeanHelper.getBean(controllerClass);
+                Class<?> controllerClass = handler.getControllerClass();
+                Object controllerBean = BeanHelper.getBean(controllerClass);
 
-            //create request params
+                //create request params
                 Map<String, Object> paramMap = new HashMap<String, Object>();
-            Enumeration<String> paramNames = req.getParameterNames();
+                Enumeration<String> paramNames = req.getParameterNames();
                 while (paramNames.hasMoreElements()) {
-                String paramName = paramNames.nextElement();
-                String paramValue = req.getParameter(paramName);
+                    String paramName = paramNames.nextElement();
+                    String paramValue = req.getParameter(paramName);
                     paramMap.put(paramName, paramValue);
-            }
-            String body = CodecUtil.decodeURL(StreamUtil.getString(req.getInputStream()));
+                }
+                String body = CodecUtil.decodeURL(StreamUtil.getString(req.getInputStream()));
                 if (StringUtil.isNotEmpty(body)) {
 
-                String[] params = StringUtil.splitString(body, "&");
-                if (ArrayUtil.isNotEmpty(params)) {
-                    //从发出的url获取后面的参数
-                    for (String param : params) {
-                        String[] array = StringUtil.splitString(param, "=");
-                        if (ArrayUtil.isNotEmpty(array) && array.length == 2) {
-                            String paramName = array[0];
-                            String paramValue = array[1];
-                            paramMap.put(paramName, paramValue);
+                    String[] params = StringUtil.splitString(body, "&");
+                    if (ArrayUtil.isNotEmpty(params)) {
+                        //从发出的url获取后面的参数
+                        for (String param : params) {
+                            String[] array = StringUtil.splitString(param, "=");
+                            if (ArrayUtil.isNotEmpty(array) && array.length == 2) {
+                                String paramName = array[0];
+                                String paramValue = array[1];
+                                paramMap.put(paramName, paramValue);
+                            }
                         }
                     }
                 }
-            }
                 Param param = new Param(paramMap);
                 Method actionMethod = handler.getActionMethod();
-            Object result = param.isEmpty() ? ReflectionUtil.invokeMethod(controllerBean, actionMethod) : ReflectionUtil.invokeMethod(controllerBean, actionMethod, param);
+                Object result = param.isEmpty() ? ReflectionUtil.invokeMethod(controllerBean, actionMethod) : ReflectionUtil.invokeMethod(controllerBean, actionMethod, param);
 
                 if (result instanceof View) {
                     handleViewResult((View) result, req, resp);
@@ -95,10 +96,10 @@ public class DispatcherServlet extends HttpServlet{
         //用于注册Servlet
         ServletContext servletContext = config.getServletContext();
         ServletRegistration jspServlet = servletContext.getServletRegistration("jsp");
-        jspServlet.addMapping(ConfigHelper.getAppJspPath()+"*");
+        jspServlet.addMapping(ConfigHelper.getAppJspPath() + "*");
         //注册处理静态资源的servlet
         ServletRegistration assetServlet = servletContext.getServletRegistration("default");
-        assetServlet.addMapping(ConfigHelper.getAppAssetPath()+"*");
+        assetServlet.addMapping(ConfigHelper.getAppAssetPath() + "*");
         UploadHelper.init(servletContext);
     }
 

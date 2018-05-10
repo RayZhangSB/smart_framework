@@ -13,14 +13,16 @@ public class View {
     //视图路径
     private String path;
     //模型数据
-    private Map<String,Object> model;
+    private Map<String, Object> model;
+
     public View(String path, Map<String, Object> model) {
         this.path = path;
         this.model = model;
     }
-    public  View addMODEL(String key ,Object value){
-        model.put(key,value);
-        return  this;
+
+    public View addMODEL(String key, Object value) {
+        model.put(key, value);
+        return this;
     }
 
     public String getPath() {
